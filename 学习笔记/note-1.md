@@ -12,7 +12,7 @@
 
     注意：安装完成直接使用webpack命令，可能会提示'不是命令...'，这时候需要查看一下webpack的版本，主要4.x版本和1.x/2.x/3.x有区别
     
-    在webpack3中，webpack本身和它的CLI是在同一个包中，但在第4版中，将两者分开来以便更好地管理它们为了能在全局环境使用webpack-cli，最好全局安装webpack-cli，如果没有全局安装cli，只能进入路径node_modules/.bin/webpack 执行了
+    在webpack3中，webpack本身和它的CLI是在同一个包中，但在第4版中，将两者分开来以便更好地管理它们
     
     总结：如果webpack-cli是局部安装的，想要使用webpack命令必须进入node_modules/.bin/webpack才能执行webpack命令
          如果是全局安装的webpack-cli，就不需要进入bin目录，webpack就能够寻找到它的命令路径了
