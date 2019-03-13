@@ -26,10 +26,38 @@
   
   package.json中的script会按照一定顺序寻找命令对应位置，本地的node_modules/.bin路径就在这个寻找清单中，所以无论是全局还是局部安装的Webpack，都不需要写前面那指明详细的路径了
   
-  npm的start命令是一个特殊的脚本名称，其特殊性表现在，在命令行中使用npm start就可以执行其对应的命令
-        如果对应的此脚本名称不是start，想要在命令行中运行时，需要这样用npm run {script name} 如npm run build
+  npm的start命令是一个特殊的脚本名称，其特殊性表现在，在命令行中使用npm start就可以执行其对应的命令。如果对应的此脚本名称不是start，想要在命令行中运行时，需要这样用npm run {script name}，如npm run build
     
-    
-    
+  ## 安装依赖模块参数的区别
+
+    npm install 默认安装package.json中的所有模块
+    npm install --dependencies 只安装dependencies中的内容
+    npm install --devDependencies 只安装devDependencies中的内容
+
+    dependencies       字段指定了项目运行所依赖的模块   npm i xxx --save 表示将该模块写入dependencies属性        也可以简写成 -S
+    devDependencies    指定项目开发所需要的模块         npm i xxx --save-dev 表示将该模块写入dependencies属性    也可以简写成 -D
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
     
 参考：http://javascript.ruanyifeng.com/nodejs/npm.html
