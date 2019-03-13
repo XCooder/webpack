@@ -18,12 +18,18 @@
          如果是全局安装的webpack-cli，就不需要进入bin目录，webpack就能够寻找到它的命令路径了
  
  ## package.json文件的作用   
-    package.json是一个标准的npm说明文件，里面包括当前项目的依赖模块，自定义的脚本任务等等。在终端中使用 npm init -y 命令可以自动创建这个package.json文件，如果不准备在npm中发布你的模块，输入 npm init -y 一路跳过即可
-    这些准备工作就绪之后，就可以安装各种依赖包了，webpack vue vue-loader less-loader 等等， 直接输入 npm i [module-name]@版本号 [-g]
+  package.json是一个标准的npm说明文件，里面包括当前项目的依赖模块，自定义的脚本任务等等
+  所以在拷贝项目的时候，node_modules文件夹就不需要了（一般很大），只要有package.json文件，直接使用 npm -i 安装依赖模块即可
+  
+  在终端中使用 npm init -y 命令可以自动创建这个package.json文件，如果不准备在npm中发布你的模块，输入 npm init -y 即可
+  这些准备工作就绪之后，就可以安装各种依赖包了，webpack vue vue-loader less-loader 等等， 直接输入 npm i [module-name]@版本号 [-g]
+  
+  package.json中的script会按照一定顺序寻找命令对应位置，本地的node_modules/.bin路径就在这个寻找清单中，所以无论是全局还是局部安装的Webpack，都不需要写前面那指明详细的路径了
+  
+  npm的start命令是一个特殊的脚本名称，其特殊性表现在，在命令行中使用npm start就可以执行其对应的命令
+        如果对应的此脚本名称不是start，想要在命令行中运行时，需要这样用npm run {script name} 如npm run build
     
-    如果是全局安装 webpack 可以直接运行 webpack --help
-    如果是本地安装 webpack win用户需要额外指定其在node_modules中的地址 .\node_modules\.bin\ 然后再运行 webpack --help
-
-    在命令行中输入命令需要代码类似于node_modules/.bin/webpack这样的路径其实是比较烦人的
-    不过npm可以引导任务执行，对npm进行配置后可以在命令行中使用简单的npm start命令来替代上面略微繁琐的命令
-    只要在package.json中对scripts对象进行相关设置
+    
+    
+    
+参考：http://javascript.ruanyifeng.com/nodejs/npm.html
