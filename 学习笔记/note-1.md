@@ -10,9 +10,9 @@
   全局安装 (不推荐)(注意：项目目录名不能使用webpack，否则在初始化的时候会报错)
   npm install -g webpack
 
-    注意：安装完成直接使用webpack命令，可能会提示'不是命令...'，这时候需要查看一下webpack的版本
+    ★注意：安装完成直接使用webpack命令，可能会提示'不是命令...'，这时候需要查看一下webpack的版本
     
-    在webpack3中，webpack本身和它的CLI是在同一个包中，但在第4版中，将两者分开来以便更好地管理它们
+      在webpack3中，webpack本身和它的CLI是在同一个包中，但在第4版中，将两者分开来以便更好地管理它们
     
     总结：如果webpack-cli是局部安装的，想要使用webpack命令必须进入node_modules/.bin/webpack才能执行webpack命令
          如果是全局安装的webpack-cli，就不需要进入bin目录，webpack就能够寻找到它的命令路径了
